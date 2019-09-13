@@ -1,1 +1,268 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+  font-size: 1.6rem;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+/*************** variables ************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+/****************** Mixin***************/
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  font-family: Oswald;
+}
+header {
+  width: 100%;
+  margin: 2% 0;
+  /*nav close*/
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  /*a close*/
+}
+@media (max-width: 500px) {
+  header nav {
+    justify-content: center;
+    font-size: 3.5rem;
+  }
+}
+header nav a {
+  margin-left: 4%;
+  text-decoration: none;
+  color: black;
+}
+/*header close*/
+.intro {
+  width: 100%;
+  border: 2px solid orange;
+  padding: 2%;
+  padding: 1%;
+  background: lightcyan;
+  /*doge close */
+  /*h1 close */
+  /*h2 close */
+  /*p close*/
+  /* button close*/
+}
+.intro .doge-img {
+  margin: 2%;
+}
+.intro h1 {
+  font-size: 5rem;
+  margin-left: 2%;
+}
+.intro h2 {
+  font-size: 2rem;
+  margin-left: 2%;
+  padding-bottom: 3%;
+}
+.intro p {
+  margin: 2%;
+}
+.intro button {
+  margin: 2%;
+  color: white;
+  background: #797979;
+  vertical-align: top;
+  padding: 1% 1%;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+/*intro close*/
+.skills {
+  display: flex;
+  flex-direction: row;
+  /*skills-box close */
+}
+.skills .skills-box {
+  width: 100%;
+  margin: 3% 10% 3% 0%;
+}
+.skills .skills-box h1 {
+  padding: 3% 0;
+  font-size: 3em;
+  font-weight: bold;
+}
+.skills .skills-box h2 {
+  padding: 3% 0;
+  font-size: 3em;
+  font-weight: bold;
+}
+.skills .skills-box li {
+  padding-bottom: 5%;
+  font-size: 1.6rem;
+}
+.skills .skills-box p {
+  font-size: 1.6rem;
+}
+.skills .skills-box2 {
+  margin-left: 20%;
+}
+/*skills close*/
+.work-history {
+  width: 100%;
+  margin: 0% 10% 3% 0%;
+  /*table close*/
+}
+.work-history h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+.work-history table tr th {
+  padding: 2% 0;
+}
+.work-history table tr:first-child {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+/* work history close*/
+footer {
+  display: flex;
+  justify-content: center;
+  background: grey;
+  color: white;
+  height: 100%;
+  padding: 3% 0;
+}
+/************************* Contact Page *****************/
+.contact ul li {
+  margin: 1% 0;
+}

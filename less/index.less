@@ -24,13 +24,20 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html{
+	font-size:62.5%;
+}
 body {
 	line-height: 1;
+	
+	font-size: 1.6rem;
 }
 ol, ul {
 	list-style: none;
@@ -49,11 +56,175 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+/*************** variables ************/
+
+@main-font-size: 3em;
+@font-oswald:Oswald;
+
 * {
     box-sizing: border-box;
-}
-
+	margin:0;
+	padding:0;
+	max-width:100%;
+   
+  }
 html, body {
     height: 100%;
 }
+/****************** Mixin***************/
+.border(){
+	border: 2px solid orange;
+	padding:2%;
+  }
+.titletext(){
+	font-size: @main-font-size;
+	font-weight: bold;
+}
+.container{
+	max-width: 880px;
+	margin: 0 auto;
+	font-family: @font-oswald;
+	
 
+
+	header {
+		width: 100%;
+		margin: 2% 0;
+		
+		nav { 
+		display: flex;
+		justify-content: flex-end;
+		
+		@media(max-width:500px){
+			
+			justify-content: center;
+			font-size: 3.5rem;
+			
+		}
+		
+			a{
+				margin-left: 4%;
+				text-decoration: none;
+				color: black;
+			} /*a close*/
+		}/*nav close*/
+
+
+
+
+	}/*header close*/
+
+
+	.intro{
+		width:100%;
+		.border();
+		padding: 1%;
+		background: lightcyan;
+		.doge-img {
+			margin: 2%
+		
+		}/*doge close */
+
+		h1{
+			font-size: 5rem;
+			margin-left: 2%;
+			
+
+		}/*h1 close */
+		h2{
+			font-size: 2rem;
+			margin-left: 2%;
+			padding-bottom: 3%;
+		
+		}/*h2 close */
+		p{
+			margin: 2%;
+		}/*p close*/
+		button {
+			margin: 2%;
+			color: white;
+			background:#797979;
+			vertical-align: top;
+			// margin-top: 6px;
+			padding: 1% 1%;
+			font-size: 1.7rem;
+			cursor: pointer;
+		}/* button close*/
+	}/*intro close*/
+
+	.skills {
+		
+		display: flex;
+		flex-direction: row;
+
+		.skills-box {
+			width: 100%;
+			margin: 3% 10% 3% 0%;
+			
+			h1 {
+				padding: 3% 0;
+				.titletext();
+			}
+			h2 {
+				padding: 3% 0;
+				.titletext();
+			}
+
+			li {
+				padding-bottom: 5%;
+				font-size: 1.6rem;
+			}
+			p{
+				font-size: 1.6rem;
+			}
+
+		}/*skills-box close */
+		.skills-box2 {
+			margin-left: 20%;
+		
+			}
+		}/*skills close*/
+
+
+
+	.work-history {
+		width: 100%;
+		margin: 0% 10% 3% 0%;
+		h1 {
+			.titletext();
+		}
+
+		table{
+			
+			
+		
+			tr th{
+				padding:2% 0;
+				
+			}
+			tr:first-child {
+				font-weight: bold;
+				font-size: 2.5rem;
+			}
+		
+		}/*table close*/
+
+	}/* work history close*/
+}/*c container close *****/
+footer{
+	display: flex;
+	justify-content: center;
+	background: grey;
+	color: white;
+	height: 100%;
+	padding: 3% 0;
+}
+
+
+/************************* Contact Page *****************/
+
+.contact{
+	ul li{
+		margin: 1% 0; 
+	}
+}
